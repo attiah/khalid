@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KAUSN</title>
+    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+    <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="themes/kausn.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="icons.css" />
+    <script src="mainmenu.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <script src="mybooks.js" type="text/javascript"></script>
+</head>
+<body style="text-align: right" onload="  send('display');">
+    <div id="MainMenu" data-theme="a" style="text-align: right">
+        <ul data-role="listview" id="menudata" data-autodividers="false" data-inset="false"
+            data-split-icon="arrow-l" data-split-theme="d">
+        </ul>
+    </div>
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <a href="#MainMenu" data-rel="popup" class="ui-btn ui-btn-right ui-corner-all ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">
+            </a><a href="javascript:window.history.back()" class="ui-btn ui-btn-left ui-corner-all ui-icon-carat-l ui-btn-icon-notext">
+            </a>
+            <h1 onclick="location.href='home.html'" style="text-align: center;">
+                KAU Social Network</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+            <h2 style="text-align: center">
+                كتبي</h2>
+            <label for="id">
+                رقم الكتاب</label>
+            <input type="text" name="id" id="id" readonly="readonly" style="text-align: right" />
+            <label for="name">
+                اسم الكتاب</label>
+            <input type="text" name="name" id="name" style="text-align: right" />
+            <label for="author">
+                المؤلف</label>
+            <input type="text" name="author" id="author" style="text-align: right" />
+            <label for="cat">
+                التصنيف</label>
+            <input type="text" name="cat" id="cat" style="text-align: right" />
+            <label for="note">
+                وصف الكتاب</label>
+            <input type="text" name="note" id="note" style="text-align: right" />
+            <table cellspacing="15">
+                <tr>
+                    <td style="width: 60px;">
+                        <label for="free">
+                            متاح؟</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="chk" id="chk" />
+                    </td>
+                </tr>
+            </table>
+            <div data-role="navbar" style="text-align: center">
+                <fieldset class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <a href="javascript:clear()" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-refresh  ui-btn-icon-notext">
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="javascript:add()" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-plus  ui-btn-icon-notext">
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="javascript:save()" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-edit  ui-btn-icon-notext">
+                        </a>
+                    </div>
+                    <div class="ui-block-d">
+                        <a href="javascript:Delete()" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-delete  ui-btn-icon-notext">
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+            <br />
+            <input id="txtfriend" data-type="search" class="ui-alt-icon" style="text-align: right;
+                direction: rtl" placeholder="ابحث عن كتاب..." />
+            <ul data-role="listview" id="alldata" data-autodividers="false" data-filter="true"
+                data-input="#txtfriend" style="direction: rtl; text-align: right; margin: 20px;"
+                data-inset="false" data-split-icon="arrow-l" data-split-theme="d">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

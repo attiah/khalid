@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KAUSN</title>
+    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+    <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="themes/kausn.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="mainmenu.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <script src="friendList.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="MainMenu" data-theme="a" style="text-align: right">
+        <ul data-role="listview" id="menudata" data-autodividers="false" data-inset="false"
+            data-split-icon="arrow-l" data-split-theme="d">
+        </ul>
+    </div>
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <a href="#MainMenu" data-rel="popup" class="ui-btn ui-btn-right  ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">
+            </a><a href="javascript:window.history.back()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-right ui-btn-icon-notext">
+            </a>
+            <h1 onclick="location.href='home.html'" style="text-align: center;">
+                KAU Social Network</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+            <h2 style="text-align: center">
+                أصدقائي</h2>
+            <input id="txtfriend" data-type="search" class="ui-alt-icon" style="text-align: right;
+                direction: rtl" placeholder="ابحث عن صديق..." />
+            <div id='nofriends'>
+            </div>
+            <ul data-role="listview" id="listpeople" data-autodividers="false" data-filter="true"
+                data-input="#txtfriend" style="direction: rtl; margin: 20px;" data-inset="false"
+                data-split-icon="arrow-l" data-split-theme="d">
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" style="text-align: center">
+                <fieldset class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <a href="" class="ui-btn ui-icon-alertss ui-btn-icon-right ui-btn-icon-notext"></a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="" class="ui-btn ui-icon-friendss ui-btn-icon-right ui-btn-icon-notext">
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="javascript:window.location = 'home.html'" class="ui-btn ui-icon-homee ui-btn-icon-right ui-btn-icon-notext">
+                        </a>
+                    </div>
+                    <div class="ui-block-d">
+                        <a href="javascript:window.location = 'book.html'" class="ui-btn ui-icon-books ui-btn-icon-right ui-btn-icon-notext">
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <input id="idno" type="hidden" value="0" />
+</body>
+</html>
